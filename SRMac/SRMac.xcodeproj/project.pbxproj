@@ -1,0 +1,362 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		EA2753291F269025000AE8A9 /* Application_Bridge.mm in Sources */ = {isa = PBXBuildFile; fileRef = EA2753271F269025000AE8A9 /* Application_Bridge.mm */; };
+		EA27534E1F269B19000AE8A9 /* Application.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EA2753411F269B19000AE8A9 /* Application.cpp */; };
+		EA27534F1F269B19000AE8A9 /* Application5.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EA2753431F269B19000AE8A9 /* Application5.cpp */; };
+		EA2753501F269B19000AE8A9 /* disp.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EA2753451F269B19000AE8A9 /* disp.cpp */; };
+		EA2753511F269B19000AE8A9 /* rend.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EA2753491F269B19000AE8A9 /* rend.cpp */; };
+		EA2753521F269B19000AE8A9 /* tex_fun.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EA27534B1F269B19000AE8A9 /* tex_fun.cpp */; };
+		EA2753531F269B19000AE8A9 /* util.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EA27534C1F269B19000AE8A9 /* util.cpp */; };
+		EA47A05E1F2591D500B9505E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA47A05D1F2591D500B9505E /* AppDelegate.swift */; };
+		EA47A0601F2591D500B9505E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA47A05F1F2591D500B9505E /* ViewController.swift */; };
+		EA47A0621F2591D500B9505E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EA47A0611F2591D500B9505E /* Assets.xcassets */; };
+		EA47A0651F2591D500B9505E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EA47A0631F2591D500B9505E /* Main.storyboard */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		EA2753251F269024000AE8A9 /* SRMac-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SRMac-Bridging-Header.h"; sourceTree = "<group>"; };
+		EA2753261F269025000AE8A9 /* Application_Bridge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Application_Bridge.h; sourceTree = "<group>"; };
+		EA2753271F269025000AE8A9 /* Application_Bridge.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = Application_Bridge.mm; sourceTree = "<group>"; };
+		EA2753411F269B19000AE8A9 /* Application.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Application.cpp; sourceTree = "<group>"; };
+		EA2753421F269B19000AE8A9 /* Application.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Application.h; sourceTree = "<group>"; };
+		EA2753431F269B19000AE8A9 /* Application5.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Application5.cpp; sourceTree = "<group>"; };
+		EA2753441F269B19000AE8A9 /* Application5.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Application5.h; sourceTree = "<group>"; };
+		EA2753451F269B19000AE8A9 /* disp.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = disp.cpp; sourceTree = "<group>"; };
+		EA2753461F269B19000AE8A9 /* disp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = disp.h; sourceTree = "<group>"; };
+		EA2753471F269B19000AE8A9 /* gz.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = gz.h; sourceTree = "<group>"; };
+		EA2753481F269B19000AE8A9 /* pch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = pch.h; sourceTree = "<group>"; };
+		EA2753491F269B19000AE8A9 /* rend.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = rend.cpp; sourceTree = "<group>"; };
+		EA27534A1F269B19000AE8A9 /* rend.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = rend.h; sourceTree = "<group>"; };
+		EA27534B1F269B19000AE8A9 /* tex_fun.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = tex_fun.cpp; sourceTree = "<group>"; };
+		EA27534C1F269B19000AE8A9 /* util.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = util.cpp; sourceTree = "<group>"; };
+		EA27534D1F269B19000AE8A9 /* util.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = util.h; sourceTree = "<group>"; };
+		EA47A05A1F2591D500B9505E /* SRMac.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SRMac.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		EA47A05D1F2591D500B9505E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		EA47A05F1F2591D500B9505E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		EA47A0611F2591D500B9505E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		EA47A0641F2591D500B9505E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		EA47A0661F2591D500B9505E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		EA47A0571F2591D500B9505E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		EA2753401F269B19000AE8A9 /* base */ = {
+			isa = PBXGroup;
+			children = (
+				EA2753411F269B19000AE8A9 /* Application.cpp */,
+				EA2753421F269B19000AE8A9 /* Application.h */,
+				EA2753431F269B19000AE8A9 /* Application5.cpp */,
+				EA2753441F269B19000AE8A9 /* Application5.h */,
+				EA2753451F269B19000AE8A9 /* disp.cpp */,
+				EA2753461F269B19000AE8A9 /* disp.h */,
+				EA2753471F269B19000AE8A9 /* gz.h */,
+				EA2753481F269B19000AE8A9 /* pch.h */,
+				EA2753491F269B19000AE8A9 /* rend.cpp */,
+				EA27534A1F269B19000AE8A9 /* rend.h */,
+				EA27534B1F269B19000AE8A9 /* tex_fun.cpp */,
+				EA27534C1F269B19000AE8A9 /* util.cpp */,
+				EA27534D1F269B19000AE8A9 /* util.h */,
+			);
+			name = base;
+			path = ../base;
+			sourceTree = "<group>";
+		};
+		EA47A0511F2591D500B9505E = {
+			isa = PBXGroup;
+			children = (
+				EA47A05C1F2591D500B9505E /* SRMac */,
+				EA47A05B1F2591D500B9505E /* Products */,
+				EA2753401F269B19000AE8A9 /* base */,
+			);
+			sourceTree = "<group>";
+		};
+		EA47A05B1F2591D500B9505E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				EA47A05A1F2591D500B9505E /* SRMac.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		EA47A05C1F2591D500B9505E /* SRMac */ = {
+			isa = PBXGroup;
+			children = (
+				EA2753261F269025000AE8A9 /* Application_Bridge.h */,
+				EA2753271F269025000AE8A9 /* Application_Bridge.mm */,
+				EA47A05D1F2591D500B9505E /* AppDelegate.swift */,
+				EA47A05F1F2591D500B9505E /* ViewController.swift */,
+				EA47A0611F2591D500B9505E /* Assets.xcassets */,
+				EA47A0631F2591D500B9505E /* Main.storyboard */,
+				EA47A0661F2591D500B9505E /* Info.plist */,
+				EA2753251F269024000AE8A9 /* SRMac-Bridging-Header.h */,
+			);
+			path = SRMac;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		EA47A0591F2591D500B9505E /* SRMac */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EA47A0691F2591D500B9505E /* Build configuration list for PBXNativeTarget "SRMac" */;
+			buildPhases = (
+				EA47A0561F2591D500B9505E /* Sources */,
+				EA47A0571F2591D500B9505E /* Frameworks */,
+				EA47A0581F2591D500B9505E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SRMac;
+			productName = SRMac;
+			productReference = EA47A05A1F2591D500B9505E /* SRMac.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		EA47A0521F2591D500B9505E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0830;
+				LastUpgradeCheck = 0830;
+				ORGANIZATIONNAME = ducho;
+				TargetAttributes = {
+					EA47A0591F2591D500B9505E = {
+						CreatedOnToolsVersion = 8.3.3;
+						DevelopmentTeam = 5PPVEAR3JD;
+						LastSwiftMigration = 0830;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = EA47A0551F2591D500B9505E /* Build configuration list for PBXProject "SRMac" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = EA47A0511F2591D500B9505E;
+			productRefGroup = EA47A05B1F2591D500B9505E /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				EA47A0591F2591D500B9505E /* SRMac */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		EA47A0581F2591D500B9505E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EA47A0621F2591D500B9505E /* Assets.xcassets in Resources */,
+				EA47A0651F2591D500B9505E /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		EA47A0561F2591D500B9505E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EA27534F1F269B19000AE8A9 /* Application5.cpp in Sources */,
+				EA27534E1F269B19000AE8A9 /* Application.cpp in Sources */,
+				EA2753531F269B19000AE8A9 /* util.cpp in Sources */,
+				EA2753291F269025000AE8A9 /* Application_Bridge.mm in Sources */,
+				EA2753511F269B19000AE8A9 /* rend.cpp in Sources */,
+				EA47A0601F2591D500B9505E /* ViewController.swift in Sources */,
+				EA2753521F269B19000AE8A9 /* tex_fun.cpp in Sources */,
+				EA47A05E1F2591D500B9505E /* AppDelegate.swift in Sources */,
+				EA2753501F269B19000AE8A9 /* disp.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		EA47A0631F2591D500B9505E /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EA47A0641F2591D500B9505E /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		EA47A0671F2591D500B9505E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		EA47A0681F2591D500B9505E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+			};
+			name = Release;
+		};
+		EA47A06A1F2591D500B9505E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 5PPVEAR3JD;
+				INFOPLIST_FILE = SRMac/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = dh.SRMac;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "SRMac/SRMac-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		EA47A06B1F2591D500B9505E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 5PPVEAR3JD;
+				INFOPLIST_FILE = SRMac/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = dh.SRMac;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "SRMac/SRMac-Bridging-Header.h";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		EA47A0551F2591D500B9505E /* Build configuration list for PBXProject "SRMac" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EA47A0671F2591D500B9505E /* Debug */,
+				EA47A0681F2591D500B9505E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EA47A0691F2591D500B9505E /* Build configuration list for PBXNativeTarget "SRMac" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EA47A06A1F2591D500B9505E /* Debug */,
+				EA47A06B1F2591D500B9505E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = EA47A0521F2591D500B9505E /* Project object */;
+}
