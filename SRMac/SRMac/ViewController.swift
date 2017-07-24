@@ -10,12 +10,18 @@ import Cocoa
 
 class ViewController: NSViewController {
     
-    var appBridge = Application_Bridge();
-    
-    override func viewDidLoad() {
+    var appBridge: Application_Bridge!;
+    //static var countload = 0
+    override func viewDidLoad() {// DOES NOT MEAN APPDELEGATE ACTIVE YET
         super.viewDidLoad()
-        //initialize application
-        appBridge.appInitialize();
+//        if appBridge != nil {
+//            return;
+//        }
+//        appBridge = Application_Bridge();
+//        //initialize application
+//        appBridge.appInitialize();
+//        //ViewController.countload += 1;
+//        print(ViewController.countload);
         // Do any additional setup after loading the view.
     }
 
@@ -23,6 +29,12 @@ class ViewController: NSViewController {
         didSet {
         // Update the view, if already loaded.
         }
+    }
+    
+    func initBridge(){
+        appBridge = Application_Bridge();
+        //initialize application
+        appBridge.appInitialize();
     }
     
     func Render(){

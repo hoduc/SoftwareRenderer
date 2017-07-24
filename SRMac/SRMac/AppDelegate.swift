@@ -13,6 +13,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 
     
     var viewController: ViewController?;
+    //static var countload = 0;
     
     func applicationDidFinishLaunching(_ aNotification: Notification) {
         // Insert code here to initialize your application
@@ -32,13 +33,19 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 //    }
     
     func applicationDidBecomeActive(_ notification: Notification) {
+        if viewController != nil{
+            return;
+        }
         viewController = ViewController(nibName: "ViewController", bundle: nil);
+        viewController?.initBridge();
+        //AppDelegate.countload += 1;
+        //print("appdel \(AppDelegate.countload)")
         //print("in func application \(self.viewController)");
     }
     
     
     @IBAction func RenderMenuClicked(_ sender: Any) {
-        print("On Render Clicked!!! \(self.viewController?.className)");
+        //print("On Render Clicked!!! \(self.viewController?.className)");
         self.viewController?.Render();
     }
 
