@@ -5,9 +5,9 @@
 /*
  * application test code for homework assignment #5
 */
-
 //#include "stdafx.h"
 //#include "CS580HW.h"
+#include "pch.h"
 #include "Application5.h"
 #include "Gz.h"
 #include "disp.h"
@@ -19,9 +19,6 @@
 static char THIS_FILE[]=__FILE__;
 #define new DEBUG_NEW
 #endif
-
-#define INFILE  "../Resources/ppot.asc"
-#define OUTFILE "../Output/output.ppm"
 
 #define	AAKERNEL_SIZE	6
 
@@ -235,8 +232,9 @@ int Application5::Render()
 	GzCoord		normalList[3];	/* vertex normals */ 
 	GzTextureIndex  	uvList[3];		/* vertex texture map indices */ 
 	char		dummy[256]; 
-	int			status; 
-
+	int			status = 0;
+    
+    printf("current file path: %s\n", __FILE__);
 
 	/* Initialize Display */
 	status |= GzInitDisplay(m_pDisplay); 
@@ -247,19 +245,34 @@ int Application5::Render()
 	nameListTriangle[0] = GZ_POSITION; 
 	nameListTriangle[1] = GZ_NORMAL; 
 	nameListTriangle[2] = GZ_TEXTURE_INDEX;  
-
+    
+    std::string cfp(__FILE__);
+    size_t lastSlash = cfp.find_last_of(SEPARATOR);
+    if (lastSlash){
+        cfp = cfp.substr(0,lastSlash+1);
+    }
+    
+    //char* pf = getCurrentFilePath(__FILE__);//pointer to filename
+    //strlcat(pf, INFILE, sizeof(pf));
+    
 	// I/O File open
 	FILE *infile;
-	if( (infile  = fopen( INFILE , "r" )) == NULL )
+	if( (infile  = fopen( (cfp + INFILE).c_str() , "r" )) == NULL )
 	{
          //AfxMessageBox( "The input file was not opened\n" );
+         fprintf( stderr, "%s was not opened\n" , INFILE);
+         //free(pf);
 		 return GZ_FAILURE;
 	}
-
+    //free(pf);
+    //pf = getCurrentFilePath(__FILE__);//pointer to filename
+    //strlcat(pf, OUTFILE, sizeof(pf));
 	FILE *outfile;
-	if( (outfile  = fopen( OUTFILE , "wb" )) == NULL )
+	if( (outfile  = fopen( (cfp + OUTFILE).c_str() , "wb" )) == NULL )
 	{
          //AfxMessageBox( "The output file was not opened\n" );
+         fprintf( stderr, "%s was not opened\n" , OUTFILE);
+         //free(pf);
 		 return GZ_FAILURE;
 	}
 
