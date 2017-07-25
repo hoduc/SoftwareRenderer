@@ -20,8 +20,8 @@ static char THIS_FILE[]=__FILE__;
 #define new DEBUG_NEW
 #endif
 
-#define INFILE  "ppot.asc"
-#define OUTFILE "output.ppm"
+#define INFILE  "../Resources/ppot.asc"
+#define OUTFILE "../Output/output.ppm"
 
 #define	AAKERNEL_SIZE	6
 
