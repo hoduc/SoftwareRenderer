@@ -1,5 +1,6 @@
 /* Texture functions for cs580 GzLib	*/
 //#include    "stdafx.h"
+#include    "pch.h"
 #include	"stdio.h"
 #include    "math.h"
 #include	"Gz.h"
@@ -58,8 +59,13 @@ int tex_fun(float u, float v, GzColor color)
   int   		i, j;
   FILE			*fd;
 
+  std::string cfp(__FILE__);
+  size_t lastSlash = cfp.find_last_of(SEPARATOR);
+  if (lastSlash){
+      cfp = cfp.substr(0,lastSlash+1);
+  }
   if (reset) {          /* open and load texture file */
-    fd = fopen ("texture", "rb");
+    fd = fopen ((cfp +  TEXFILE).c_str(), "rb");
     if (fd == NULL) {
       fprintf (stderr, "texture file not found\n");
       exit(-1);

@@ -308,3 +308,6 @@ __pycache__/
 #Mac
 .DS_Store
 README.txt
+
+#Output folder
+Output/

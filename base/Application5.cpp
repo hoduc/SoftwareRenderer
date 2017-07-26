@@ -252,9 +252,6 @@ int Application5::Render()
         cfp = cfp.substr(0,lastSlash+1);
     }
     
-    //char* pf = getCurrentFilePath(__FILE__);//pointer to filename
-    //strlcat(pf, INFILE, sizeof(pf));
-    
 	// I/O File open
 	FILE *infile;
 	if( (infile  = fopen( (cfp + INFILE).c_str() , "r" )) == NULL )
