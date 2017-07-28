@@ -699,7 +699,7 @@
                         </subviews>
                     </view>
                     <connections>
-                        <outlet property="imageView" destination="MgJ-fa-wbb" id="3tc-DZ-7NS"/>
+                        <outlet property="imgView" destination="MgJ-fa-wbb" id="Cpc-er-stA"/>
                     </connections>
                 </viewController>
                 <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>

@@ -10,11 +10,16 @@ import Cocoa
 
 class ViewController: NSViewController {
     
-    @IBOutlet weak var imageView: NSImageView! //to display rendered image
+    
+    @IBOutlet var imgView: NSImageView!
     var appBridge: Application_Bridge!;
     //static var countload = 0
     override func viewDidLoad() {// DOES NOT MEAN APPDELEGATE ACTIVE YET
         super.viewDidLoad()
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(initBridge), name: NSNotification.Name("AppActive"), object: nil);
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(Render), name: NSNotification.Name("AppRender"), object: nil);
     }
 
     override var representedObject: Any? {
@@ -23,7 +28,7 @@ class ViewController: NSViewController {
         }
     }
     
-    func initBridge(){
+    func initBridge(notification: Notification){
         appBridge = Application_Bridge();
         //initialize application
         appBridge.appInitialize();
@@ -32,44 +37,19 @@ class ViewController: NSViewController {
     func imgFromBitmap(frameBuffer: UnsafeMutablePointer<Int8>!, width: Int, height: Int) -> NSImage?{
         var frameBuffer = frameBuffer;
         let pixelDataSize = MemoryLayout<Int8>.size;
-//        let data: Data = withUnsafePointer(to: &frameBuffer){
-//            Data(bytes: UnsafePointer($0), count: pixelDataSize);
-//        };
-        let data = Data(buffer: UnsafeBufferPointer(start: &frameBuffer, count: width*height));
-        let cfdata = NSData(data: data) as CFData
-        let provider: CGDataProvider! = CGDataProvider(data: cfdata)
         
-        if provider == nil {
-            print("CGDataProvider is not supposed to be nil");
-            return nil
-        }
-        let cgimage: CGImage! = CGImage(
-            width: width,
-            height: height,
-            bitsPerComponent: 8,
-            bitsPerPixel: 24,
-            bytesPerRow: width * pixelDataSize,
-            space: CGColorSpaceCreateDeviceRGB(),
-            bitmapInfo: CGBitmapInfo(rawValue: CGImageAlphaInfo.premultipliedFirst.rawValue),
-            provider: provider,
-            decode: nil,
-            shouldInterpolate: false,
-            intent: .defaultIntent
-        )
-        
-        if cgimage == nil {
-            print("CGImage is not supposed to be nil");
-            return nil;
-        }
-        
-        return NSImage(cgImage: cgimage, size: NSSize(width: width, height: height));
+        let colorSpace = CGColorSpaceCreateDeviceRGB();
+        let bitmapContext = CGContext(data: frameBuffer, width: width, height: height, bitsPerComponent: 8, bytesPerRow: 4*width, space: colorSpace, bitmapInfo: CGBitmapInfo(rawValue: CGImageAlphaInfo.premultipliedLast.rawValue).rawValue);
+        let cgImage = bitmapContext!.makeImage();
+        return NSImage(cgImage: cgImage!, size: NSSize(width: width, height: height));
     }
     
-    func Render(){
+    func Render(notification: Notification){
         appBridge.render();
-        //var fb = appBridge.getFrameBuffer();
-        
-        imageView.image = imgFromBitmap(frameBuffer: appBridge.getFrameBuffer(), width: Int(appBridge.getFrameBufferWidth()), height: Int(appBridge.getFrameBufferHeight()));
+        var cgiImage = imgFromBitmap(frameBuffer: appBridge.getFrameBuffer(), width: Int(appBridge.getFrameBufferWidth()), height: Int(appBridge.getFrameBufferHeight()));
+        if cgiImage != nil {
+            self.imgView.image = cgiImage;
+        }
         
         
     }
